@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/*
+  Identidade visual do Pede Barra.
+  Toda cor usada nas telas vem daqui: troque aqui e muda no app inteiro.
+*/
+@theme {
+  /* Marca */
+  --color-marca: #e8213d;
+  --color-marca-topo: #fb5c74;
+  --color-marca-escuro: #b3142b;
+  --color-marca-claro: #ffe5e9;
+  --color-marca-fundo: #fff5f6;
+
+  /* Texto */
+  --color-texto: #221a1c;
+  --color-texto-2: #5b6663;
+
+  /* Superfícies */
+  --color-fundo: #ffffff;
+  --color-cinza: #f4f2f2;
+  --color-borda: #ebe6e7;
+
+  /* Categorias */
+  --color-restaurantes: #e8213d;
+  --color-farmacias: #1e8a4c;
+  --color-mercados: #1f6fd1;
+  --color-flash: #f2b705;
+  --color-lojas: #7a3fc2;
+
+  /* Fonte */
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--color-fundo);
+  color: var(--color-texto);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
