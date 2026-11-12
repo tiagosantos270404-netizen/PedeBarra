@@ -35,10 +35,26 @@ Diferencial: custo bem menor que o dos grandes apps, atendimento local e cada lo
 - **Importação por planilha:** o painel do comerciante precisa aceitar uma planilha (CSV ou Excel) com código de barras, nome, preço e categoria, para cadastrar muitos produtos de uma vez. Mercados e farmácias costumam conseguir exportar isso do sistema de caixa. Mostrar uma prévia antes de salvar e avisar as linhas com erro.
 - O sistema precisa guardar o plano de cada loja e calcular sozinho quanto cada uma deve no mês.
 
+## Entregas (decidido — só registrado; não programe antes da Fase 4)
+
+- **Quem entrega:** entregadores cadastrados no Pede Barra.
+- **Taxa de entrega:** fixa de **R$ 7,00 por pedido**, e o valor vai **inteiro para o entregador**. O Pede Barra não fica com nada da taxa.
+- **R$ 7,00 é o preço inicial**, definido por mim. Nas primeiras entregas vamos observar se ele funciona também nos trajetos mais longos dentro da área urbana. Deixe o valor fácil de ajustar, nunca espalhado pelo código.
+- **Área atendida:** somente a área urbana de Barra do Ribeiro. Sem entregas no interior.
+- A taxa de entrega é separada dos planos dos comerciantes: a mensalidade e as comissões acima continuam iguais e não incidem sobre a taxa.
+
+**Fluxo proposto da entrega:**
+
+1. O cliente faz o pedido e a loja confirma.
+2. Depois da confirmação da loja, o app avisa os entregadores disponíveis.
+3. O aviso mostra o valor que o entregador vai receber.
+4. Cada entrega só pode ser aceita por **um** entregador: quando o primeiro aceita, ela some para os outros.
+
 ## Ainda não decidido (pergunte antes de programar essas partes; nunca invente)
 
-- Quem faz a entrega: a própria loja, entregadores do app, ou os dois.
-- Valor e regra da taxa de entrega, e até onde entrega (só a cidade ou interior também).
+- **Delimitação da área atendida:** onde exatamente termina a área urbana (bairros, raio ou mapa) e o que o app mostra para um endereço fora dela.
+- **Repasse ao entregador:** como e quando os R$ 7,00 chegam nele (na hora, por dia, por semana; por Pix ou em dinheiro).
+- **Quando ninguém aceita a entrega:** quanto tempo esperar e o que acontece depois (avisar de novo, avisar a loja, cancelar).
 - Como funciona a categoria **Flash** na prática.
 - Como o dinheiro do Pix chega na loja (direto para ela ou passando pelo Pede Barra).
 
@@ -61,8 +77,8 @@ Diferencial: custo bem menor que o dos grandes apps, atendimento local e cada lo
 ## As 4 partes do sistema
 
 1. **App do cliente:** início com categorias e lojas próximas, busca, página da loja com cardápio/produtos, carrinho, cupom, pagamento (Pix, cartão na entrega, dinheiro com troco), acompanhar pedido, histórico, endereços.
-2. **Painel do comerciante:** receber/aceitar/recusar pedidos com aviso sonoro, mudar status (em preparo → saiu para entrega), cadastrar produtos com foto e preço, abrir/fechar a loja, horários, taxa de entrega, personalizar loja (cor, logo, capa, nome).
-3. **App do entregador:** ver entregas disponíveis, aceitar, rota no mapa, marcar como entregue, ganhos do dia.
+2. **Painel do comerciante:** receber/aceitar/recusar pedidos com aviso sonoro, mudar status (em preparo → saiu para entrega), cadastrar produtos com foto e preço, abrir/fechar a loja, horários, personalizar loja (cor, logo, capa, nome).
+3. **App do entregador:** cadastro, receber aviso de entrega com o valor a receber, aceitar (uma entrega, um entregador), rota no mapa, marcar como entregue, ganhos do dia.
 4. **Admin (eu):** aprovar lojas, ver todos os pedidos, comissões, cupons, banners da tela inicial.
 
 ## Tecnologia sugerida (pode propor outra, explicando o porquê)
@@ -93,7 +109,7 @@ A Fase 1 é pequena de propósito: quero algo funcionando rápido para mostrar n
 - **Fase 1 (só isso):** app do cliente com a identidade visual pronta, tela inicial com as 5 categorias e o cardápio do Léo funcionando de verdade até o carrinho. Inclui o **modo demonstração** (ver abaixo).
 - **Fase 2:** cadastro de loja bem simples e painel do comerciante: receber pedidos com **aviso sonoro**, cadastrar produtos pelo celular, personalizar cor, logo e capa.
 - **Fase 3:** login do cliente, pedidos em tempo real, pagamento Pix e acompanhamento do pedido.
-- **Fase 4:** entregas (depois que eu decidir quem entrega).
+- **Fase 4:** entregas com entregadores cadastrados, seguindo a seção "Entregas". Antes de começar, me pergunte os três pontos de entrega que ainda estão pendentes.
 - **Fase 5:** admin com cobrança dos planos, cupons, avaliações, notificações e preparação para lançar na cidade.
 
 ## Três coisas que não podem faltar

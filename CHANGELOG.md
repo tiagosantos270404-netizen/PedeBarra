@@ -1,5 +1,11 @@
 # Atualizações
 
+## 12/11/2026 — Decisões sobre as entregas
+- Entregas feitas por entregadores cadastrados no Pede Barra, com taxa fixa de R$ 7,00 por pedido, inteira para o entregador.
+- Atendimento só na área urbana de Barra do Ribeiro.
+- Fluxo proposto: a loja confirma, os entregadores disponíveis são avisados com o valor a receber, e só um aceita cada entrega.
+- Nada foi programado ainda. Ficam pendentes a delimitação da área, o repasse ao entregador e o que fazer quando ninguém aceitar.
+
 ## 12/11/2026 — Materiais de apresentação e regras do negócio
 - Guardados na pasta `materiais/`: protótipo das telas, site para parceiros, slides, vídeo e texto da narração.
 - Valores fechados: R$ 89,90 por mês ou comissão de 5% (mercados e farmácias) e 6% (restaurantes, lancherias e lojas gerais).
