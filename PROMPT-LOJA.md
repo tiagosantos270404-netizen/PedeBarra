@@ -6,6 +6,25 @@
 
 Construa a **página da loja** do app do cliente do Pede Barra: a tela que abre quando o cliente toca numa loja. Ela precisa funcionar de verdade até o carrinho, com o Léo Restaurante & Lancheria como primeira loja. Siga o `CLAUDE.md` (identidade visual, regras do negócio e jeito de trabalhar) e use `materiais/prototipo/Loja.dc.html` como referência do visual.
 
+## Referência: iFood
+
+O Tiago quer a loja e o app funcionando no estilo do iFood (https://www.ifood.com.br/). Use o iFood como referência de **como funciona**: a ordem das informações, o jeito de escolher adicionais, a sacola. **Não copie** o visual dele: cores, logo, ícones, ilustrações e textos são do Pede Barra, conforme o `CLAUDE.md`.
+
+O que trazer do jeito iFood de funcionar:
+
+- **Cabeçalho da loja** com nota, pedido mínimo, tempo e taxa de entrega, e um "ver mais" com horário, endereço e formas de pagamento.
+- **Entrega ou retirada:** o cliente escolhe no topo da loja.
+- **Busca dentro da loja**, para achar um produto pelo nome.
+- **Destaques:** uma fileira de produtos em evidência, que rola de lado, antes do cardápio.
+- **Seções do cardápio** numa barra que fica presa no topo enquanto o cliente rola.
+- **Produto com foto à direita**, nome, descrição e preço. Preço promocional mostra o valor antigo riscado.
+- **Tela do produto com complementos em grupos:** cada grupo diz se é obrigatório ou opcional e quantos itens dá para escolher (ex.: "Escolha 1 molho", "Adicionais, até 5"). O total atualiza na hora.
+- **Sacola de uma loja só:** se o cliente tentar adicionar item de outra loja, o app pergunta se quer esvaziar a sacola.
+- **Loja fechada** aparece com aviso e horário em que abre.
+- **Favoritar a loja** com um toque.
+
+Tudo isso está marcado como proposta em "Falta decidir" quando depende de uma decisão do Tiago.
+
 ## O que o cliente vê
 
 1. **Topo da loja:** foto de capa (ou a cor da loja, se não tiver foto), logo, nome e tipo de comércio.
@@ -42,15 +61,18 @@ Construa a **página da loja** do app do cliente do Pede Barra: a tela que abre 
 
 ## Falta decidir
 
+Onde diz "proposta", é o jeito que o iFood faz. Vale se o Tiago confirmar.
+
 1. **Cardápio do Léo:** quais são os itens, as seções e os preços reais?
-2. **Adicionais e opções:** o produto vai ter extras pagos (bacon, ovo, queijo) e escolhas (tamanho, ponto da carne)?
-3. **Produto em falta:** aparece como "esgotado" ou some do cardápio?
-4. **Pedido mínimo:** a loja pode exigir um valor mínimo para entrega?
-5. **Retirar na loja:** o cliente pode buscar o pedido e não pagar a taxa de entrega?
-6. **Loja fechada:** só mostra o cardápio, ou deixa agendar o pedido para quando abrir?
-7. **Mercado e farmácia:** com muitos produtos, precisa de busca dentro da loja. Entra agora ou depois?
+2. **Adicionais e opções:** proposta: grupos de complementos, obrigatórios ou opcionais, com extras pagos.
+3. **Produto em falta:** proposta: continua aparecendo, apagado e marcado como "esgotado".
+4. **Pedido mínimo:** proposta: cada loja define o seu, e a sacola avisa quanto falta.
+5. **Retirar na loja:** proposta: o cliente pode retirar e não paga a taxa de entrega.
+6. **Loja fechada:** proposta: mostra o cardápio, mas não deixa pedir. Sem agendamento por enquanto.
+7. **Busca dentro da loja:** proposta: entra já nesta etapa.
 8. **Farmácia:** remédio que exige receita fica fora do app?
-9. **Avaliações:** a nota da loja aparece nesta tela desde o começo?
+9. **Avaliações:** proposta: a nota aparece no cabeçalho. Loja nova mostra "Novo" até ter avaliações.
+10. **Destaques:** quem escolhe os produtos em destaque: a loja, ou o app pelos mais vendidos?
 
 ## Ideias novas
 
