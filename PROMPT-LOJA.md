@@ -86,8 +86,8 @@ Pronto e para reaproveitar:
 - `src/components/Logo.tsx`: ícone e logo completo, em tom claro ou escuro.
 - `src/app/page.tsx`: página provisória "em breve".
 
-Ainda não existe: dados das lojas e produtos, página da loja, tela do produto, carrinho, ícones das categorias, botões e cards reutilizáveis.
+Atualização de 12/11/2026: dados, páginas das lojas, produto com complementos, carrinho, ícones e lista de lojas estão implementados e conectados. A lista acima descrevia apenas a base anterior à etapa.
 
 ## Situação
 
-Em construção no ramo `etapa-loja-carrinho`. Veja `CONTINUAR.md` para o que já está pronto e o que falta.
+Etapa implementada e validada localmente no ramo `etapa-loja-carrinho`, sem publicação. Veja `CONTINUAR.md` para o estado atual e `VALIDACAO.md` para os testes e limites.

@@ -27,10 +27,11 @@ export function BarraCarrinho() {
           <div className="fixed inset-x-0 bottom-0 z-20 border-t border-borda bg-white px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3">
             <Link
               href="/carrinho"
-              className="mx-auto flex h-14 max-w-2xl items-center justify-between gap-3 rounded-2xl bg-marca px-5 text-base font-extrabold text-white"
+              className="mx-auto flex h-14 max-w-2xl items-center justify-between gap-3 rounded-2xl bg-marca-escuro px-5 text-base font-extrabold text-white"
             >
               <span>
-                Ver carrinho · {resumo.quantidade} {resumo.quantidade === 1 ? "item" : "itens"}
+                Ver carrinho · {resumo.quantidade}{" "}
+                {resumo.quantidade === 1 ? "item" : "itens"}
               </span>
               <span>{formatarPreco(resumo.subtotalCentavos)}</span>
             </Link>

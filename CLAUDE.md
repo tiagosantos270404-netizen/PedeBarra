@@ -155,3 +155,9 @@ A pasta `materiais/` guarda o protótipo das telas, o site para parceiros, os sl
 - Cores e fonte ficam em `src/app/globals.css` (bloco `@theme`). Use as classes `bg-marca`, `text-texto-2`, `bg-farmacias` etc., nunca cores soltas.
 
 @AGENTS.md
+
+## Estado validado em 12/11/2026
+
+A etapa de `PROMPT-LOJA.md` está implementada: lista simples das três lojas, catálogo, produto com complementos e carrinho até a conclusão demonstrativa. A página "em breve" foi substituída. Carrinho permite editar complementos e observações, além das quantidades.
+
+Verificações locais aprovadas: lint, tipos, 46 testes de regras, build e roteiro no Edge com celular simulado. Veja `VALIDACAO.md` e `CONTINUAR.md`. Não há publicação nem pedidos reais. A tela inicial completa, painel, pagamentos e entregadores continuam fora desta entrega.

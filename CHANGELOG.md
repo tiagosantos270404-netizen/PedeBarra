@@ -1,5 +1,15 @@
 # Atualizações
 
+## 12/11/2026 — Loja e carrinho: telas conectadas e demonstração concluída
+- A página "em breve" foi substituída pela lista das três lojas de exemplo.
+- Páginas de loja com cores próprias, horários, busca, destaques, categorias, produtos e favoritos.
+- Carrinho com edição de complementos, quantidade, remoção, troca de loja confirmada, entrega a R$ 7,00 e retirada grátis.
+- Conferência de loja fechada, produtos esgotados e preços alterados antes da conclusão demonstrativa.
+- Ajustes de contraste e espaço dos botões, inclusive em telas pequenas.
+- Passaram lint, tipos, 46 testes de regras, build e roteiro de navegador. Instruções em `VALIDACAO.md`.
+- Sem publicação do app, cobrança real ou alteração do ramo principal.
+
+
 ## 12/11/2026 — Página da loja e carrinho: primeira parte (ainda sem telas)
 - Criadas as três lojas de exemplo: Léo, um mercado e uma farmácia só com higiene e beleza. Produtos, preços e horários são demonstrativos.
 - Prontas e testadas as regras: contas do carrinho, complementos obrigatórios e limites, entrega a R$ 7,00 e retirada grátis, uma loja por pedido, recuperação do carrinho salvo, loja aberta ou fechada e busca.

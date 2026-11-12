@@ -22,13 +22,14 @@ type Props = {
   bloqueio: string | null;
   aoFechar: () => void;
   aoAdicionar: (selecao: Selecao, observacao: string, quantidade: number) => void;
+  inicial?: { selecao: Selecao; observacao: string; quantidade: number };
 };
 
 /** Tela do produto: imagem maior, opções, observações e quantidade. */
-export function FolhaProduto({ produto, bloqueio, aoFechar, aoAdicionar }: Props) {
-  const [selecao, setSelecao] = useState<Selecao>({});
-  const [observacao, setObservacao] = useState("");
-  const [quantidade, setQuantidade] = useState(1);
+export function FolhaProduto({ produto, bloqueio, aoFechar, aoAdicionar, inicial }: Props) {
+  const [selecao, setSelecao] = useState<Selecao>(inicial?.selecao ?? {});
+  const [observacao, setObservacao] = useState(inicial?.observacao ?? "");
+  const [quantidade, setQuantidade] = useState(inicial?.quantidade ?? 1);
   const [tentou, setTentou] = useState(false);
   const corpo = useRef<HTMLDivElement>(null);
 
@@ -192,7 +193,7 @@ export function FolhaProduto({ produto, bloqueio, aoFechar, aoAdicionar }: Props
       </div>
 
       {/* Rodapé fora da área que rola: fica sempre à mão e nunca cobre os campos. */}
-      <div className="flex items-center gap-3 border-t border-borda bg-white px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3">
+      <div className="flex flex-wrap items-center gap-3 border-t border-borda bg-white px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3">
         {impedimento ? (
           <p className="flex min-h-12 flex-1 items-center justify-center rounded-2xl bg-cinza px-4 text-center font-bold text-texto-2">
             {impedimento}
@@ -208,9 +209,9 @@ export function FolhaProduto({ produto, bloqueio, aoFechar, aoAdicionar }: Props
             <button
               type="button"
               onClick={confirmar}
-              className="flex min-h-12 flex-1 items-center justify-between gap-2 rounded-2xl bg-marca px-4 font-extrabold text-white"
+              className="flex min-h-12 min-w-40 flex-1 items-center justify-between gap-2 rounded-2xl bg-marca-escuro px-4 font-extrabold text-white"
             >
-              <span>Adicionar</span>
+              <span>{inicial ? "Salvar" : "Adicionar"}</span>
               <span>{formatarPreco(total)}</span>
             </button>
           </>

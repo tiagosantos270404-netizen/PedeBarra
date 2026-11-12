@@ -190,6 +190,16 @@ export function substituirPor(carrinho: Carrinho, p: Pedido): ResultadoAdicionar
   return adicionar({ ...carrinho, lojaId: null, itens: [] }, p);
 }
 
+/** Uma edição inválida nunca apaga o item anterior. */
+export function editar(carrinho: Carrinho, chave: string, p: Pedido): ResultadoAdicionar {
+  if (carrinho.lojaId !== p.loja.id || !carrinho.itens.some((i) => i.chave === chave)) {
+    return { tipo: "invalido", motivo: "O carrinho mudou. Abra o produto novamente." };
+  }
+  const item = montarItem(p);
+  if (typeof item === "string") return { tipo: "invalido", motivo: item };
+  return { tipo: "ok", carrinho: { ...carrinho, itens: juntar(carrinho.itens.filter((i) => i.chave !== chave), item) } };
+}
+
 export function alterarQuantidade(carrinho: Carrinho, chave: string, quantidade: number): Carrinho {
   if (quantidade < 1) return remover(carrinho, chave);
   return {

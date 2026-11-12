@@ -12,6 +12,7 @@ import {
   alterarQuantidade,
   CARRINHO_VAZIO,
   definirModo,
+  editar,
   remover,
   restaurar,
   substituirPor,
@@ -127,6 +128,7 @@ function aplicar(r: ResultadoAdicionar): ResultadoAdicionar {
 
 /** Ações do carrinho. Podem ser chamadas de qualquer tela. */
 export const acoesCarrinho = {
+  editar: (chave: string, p: Pedido) => aplicar(editar(lerCarrinho().carrinho, chave, p)),
   adicionar: (p: Pedido) => aplicar(adicionar(lerCarrinho().carrinho, p)),
   substituirPor: (p: Pedido) => aplicar(substituirPor(lerCarrinho().carrinho, p)),
   alterarQuantidade: (chave: string, q: number) =>
