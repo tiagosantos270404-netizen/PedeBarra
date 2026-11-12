@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; margin: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #221A1C; }
+body { font-family: "Inter", Arial, sans-serif; color: #221A1C; font-weight: 500; }
+.scene { position: absolute; inset: 0; padding: 150px 90px; display: none; flex-direction: column; justify-content: center; gap: 56px; }
+.eyebrow { font-size: 40px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; color: #B3142B; }
+h1 { font-size: 124px; font-weight: 800; line-height: 1.04; letter-spacing: -4px; }
+h2 { font-size: 100px; font-weight: 800; line-height: 1.06; letter-spacing: -3px; }
+p.big { font-size: 56px; font-weight: 700; line-height: 1.25; }
+em { font-style: normal; color: #B3142B; }
+.red { background: #E8213D; color: #fff; }
+.red .eyebrow { color: #fff; }
+.light { background: #FFF5F6; }
+.pink { background: #FFE5E9; }
+.dark { background: #221A1C; color: #fff; }
+.center { align-items: center; text-align: center; }
+.wordmark { font-size: 132px; font-weight: 800; letter-spacing: -5px; line-height: 1; }
+.cats { display: flex; flex-direction: column; gap: 34px; }
+.cat { display: flex; align-items: center; gap: 36px; font-size: 68px; font-weight: 800; letter-spacing: -2px; }
+.cat svg { width: 150px; height: 150px; flex: none; }
+.card { background: #fff; border-radius: 48px; overflow: hidden; box-shadow: 0 40px 90px -40px rgba(34,26,28,.45); }
+.card-top { height: 240px; position: relative; }
+.card-logo { position: absolute; left: 44px; bottom: -70px; width: 170px; height: 170px; border-radius: 40px; background: #221A1C; border: 10px solid #fff; display: flex; align-items: center; justify-content: center; font-size: 46px; font-weight: 800; }
+.card-body { padding: 100px 44px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.card-body b { display: block; font-size: 56px; font-weight: 800; letter-spacing: -1.5px; }
+.card-body span { font-size: 38px; color: #5B5154; }
+.plus { width: 110px; height: 110px; border-radius: 30px; display: flex; align-items: center; justify-content: center; font-size: 72px; font-weight: 800; flex: none; }
+.swatches { display: flex; gap: 28px; justify-content: center; }
+.sw { width: 110px; height: 110px; border-radius: 55px; border: 10px solid #FFE5E9; }
+.plan { background: #fff; border-radius: 44px; padding: 52px; display: flex; flex-direction: column; gap: 10px; }
+.plan small { font-size: 44px; font-weight: 700; color: #5B5154; }
+.plan b { font-size: 150px; font-weight: 800; letter-spacing: -6px; line-height: 1; }
+.plan.main { border: 8px solid #E8213D; }
+.ou { font-size: 52px; font-weight: 800; color: #B3142B; text-align: center; }
+.zap { font-size: 108px; font-weight: 800; letter-spacing: -4px; color: #FF8FA0; white-space: nowrap; }
+.giant { font-size: 300px; font-weight: 800; letter-spacing: -12px; line-height: 0.9; }
+#wipe { position: absolute; left: 0; right: 0; bottom: 0; height: 0; z-index: 9; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+<defs>
+<linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FB5C74"/><stop offset="1" stop-color="#E8213D"/></linearGradient>
+<symbol id="logo-inv" viewBox="0 0 120 120"><rect width="120" height="120" rx="30" fill="#fff"/><path d="M45 44v-6a15 15 0 0 1 30 0v6" fill="none" stroke="#E8213D" stroke-width="8" stroke-linecap="round"/><path d="M28 44h64l-6 50a7 7 0 0 1-7 6H41a7 7 0 0 1-7-6z" fill="#E8213D"/><path d="M39 68q7-7 14 0t14 0t14 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M41 82q6-6 12 0t13 0t13 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></symbol>
+<symbol id="logo" viewBox="0 0 120 120"><rect width="120" height="120" rx="30" fill="url(#pbg)"/><path d="M45 44v-6a15 15 0 0 1 30 0v6" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M28 44h64l-6 50a7 7 0 0 1-7 6H41a7 7 0 0 1-7-6z" fill="#fff"/><path d="M39 68q7-7 14 0t14 0t14 0" fill="none" stroke="#E8213D" stroke-width="5" stroke-linecap="round"/><path d="M41 82q6-6 12 0t13 0t13 0" fill="none" stroke="#E8213D" stroke-width="5" stroke-linecap="round"/></symbol>
+<symbol id="rest" viewBox="0 0 120 120"><rect width="120" height="120" rx="30" fill="#E8213D"/><path d="M30 76a30 30 0 0 1 60 0z" fill="#fff"/><circle cx="60" cy="40" r="5" fill="#fff"/><path d="M22 84h76" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/></symbol>
+<symbol id="farm" viewBox="0 0 120 120"><rect width="120" height="120" rx="30" fill="#1E8A4C"/><rect x="48" y="26" width="24" height="68" rx="7" fill="#fff"/><rect x="26" y="48" width="68" height="24" rx="7" fill="#fff"/></symbol>
+<symbol id="merc" viewBox="0 0 120 120"><rect width="120" height="120" rx="30" fill="#1F6FD1"/><path d="M22 32h12l9 40h42l8-28H38" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="88" r="7" fill="#fff"/><circle cx="80" cy="88" r="7" fill="#fff"/></symbol>
+<symbol id="flash" viewBox="0 0 120 120"><rect width="120" height="120" rx="30" fill="#F2B705"/><path d="M68 16L32 66h24l-6 38 38-52H64z" fill="#221A1C" stroke="#221A1C" stroke-width="3" stroke-linejoin="round"/></symbol>
+<symbol id="lojas" viewBox="0 0 120 120"><rect width="120" height="120" rx="30" fill="#7A3FC2"/><path d="M22 48l9-20h58l9 20z" fill="#fff"/><rect x="31" y="54" width="58" height="40" rx="4" fill="none" stroke="#fff" stroke-width="6"/><rect x="52" y="68" width="16" height="26" fill="#fff"/></symbol>
+</defs>
+</svg>
+
+<div class="scene red center" data-dur="3.4" data-bg="#E8213D">
+  <svg class="a" data-t="0.15" data-k="pop" width="340" height="340"><use href="#logo-inv"/></svg>
+  <div class="wordmark a" data-t="0.7">pede barra</div>
+  <p class="big a" data-t="1.3">Tudo de Barra do Ribeiro,<br>na tua porta.</p>
+</div>
+
+<div class="scene light" data-dur="4" data-bg="#FFF5F6">
+  <div class="eyebrow a" data-t="0.1">Para o comércio da cidade</div>
+  <h1><span class="a" data-t="0.3" style="display:block">O delivery</span><span class="a" data-t="0.6" style="display:block">feito para</span><span class="a" data-t="0.9" style="display:block"><em>Barra do Ribeiro.</em></span></h1>
+  <p class="big a" data-t="1.6" style="color:#5B5154">O cliente pede pelo app.<br>Tu recebe o pedido na hora.</p>
+</div>
+
+<div class="scene pink" data-dur="5" data-bg="#FFE5E9">
+  <h2 class="a" data-t="0.1">Tem lugar para todo o comércio</h2>
+  <div class="cats">
+    <div class="cat a" data-t="0.7"><svg><use href="#rest"/></svg>Restaurantes</div>
+    <div class="cat a" data-t="1.1"><svg><use href="#farm"/></svg>Farmácias</div>
+    <div class="cat a" data-t="1.5"><svg><use href="#merc"/></svg>Mercados</div>
+    <div class="cat a" data-t="1.9"><svg><use href="#flash"/></svg>Flash</div>
+    <div class="cat a" data-t="2.3"><svg><use href="#lojas"/></svg>Lojas Gerais</div>
+  </div>
+</div>
+
+<div class="scene pink" id="s-loja" data-dur="5.4" data-bg="#FFE5E9">
+  <h2 class="a" data-t="0.1">A loja com a <em>tua cara</em></h2>
+  <div class="card a" data-t="0.6">
+    <div class="card-top" id="c-top"><div class="card-logo" id="c-logo">LOJA</div></div>
+    <div class="card-body"><div><b>Tua loja aqui</b><span>Tua cor, teu logo, tua capa</span></div><div class="plus" id="c-plus">+</div></div>
+  </div>
+  <div class="swatches a" data-t="1.0" id="c-sw"></div>
+  <p class="big a" data-t="1.4" style="color:#5B5154">E o pedido novo toca<br>direto no teu celular.</p>
+</div>
+
+<div class="scene light" data-dur="6.2" data-bg="#FFF5F6">
+  <h2 class="a" data-t="0.1">Tu escolhe como participar</h2>
+  <div class="plan main a" data-t="0.7"><small>Mensalidade fixa</small><b>R$ 89,90</b><small>por mês, sem comissão</small></div>
+  <div class="ou a" data-t="1.5">ou</div>
+  <div class="plan a" data-t="1.8"><small>Comissão por venda, a partir de</small><b>5%</b><small>só paga quando vende</small></div>
+  <p class="big a" data-t="2.5" style="font-size:46px;color:#5B5154">Sem taxa de adesão.<br>Montagem da loja a combinar.</p>
+</div>
+
+<div class="scene red" data-dur="4.2" data-bg="#E8213D">
+  <div class="eyebrow a" data-t="0.1">Lançamento</div>
+  <div class="giant a" data-t="0.3" data-k="pop" style="transform-origin:left center">1 mês<br>grátis</div>
+  <p class="big a" data-t="1.1" style="font-size:72px">para as 5 primeiras lojas.</p>
+</div>
+
+<div class="scene dark" data-dur="5" data-bg="#221A1C">
+  <div class="a" data-t="0.2" style="display:flex;align-items:center;gap:32px"><svg width="150" height="150"><use href="#logo"/></svg><div class="wordmark" style="font-size:96px;letter-spacing:-3px">pede barra</div></div>
+  <h2 class="a" data-t="0.6">Bora colocar tua loja no app?</h2>
+  <p class="big a" data-t="1.1" style="color:#E5D3D6">Chama no WhatsApp:</p>
+  <div class="zap a" data-t="1.4" data-k="pop" style="transform-origin:left center">(51) 99181-9669</div>
+</div>
+
+<div id="wipe"></div>
+
+<script>
+var scenes = Array.prototype.slice.call(document.querySelectorAll('.scene'));
+var COLORS = ['#E8213D', '#FF7A1A', '#1E8A4C', '#1F6FD1', '#7A3FC2'];
+var sw = document.getElementById('c-sw');
+COLORS.forEach(function (c) { var d = document.createElement('div'); d.className = 'sw'; d.style.background = c; sw.appendChild(d); });
+function ease(x) { x = Math.max(0, Math.min(1, x)); return 1 - Math.pow(1 - x, 3); }
+function durations() { return scenes.map(function (s) { return parseFloat(s.dataset.dur); }); }
+function render(i, t) {
+  scenes.forEach(function (s, k) { s.style.display = k === i ? 'flex' : 'none'; });
+  var s = scenes[i], dur = parseFloat(s.dataset.dur);
+  s.querySelectorAll('.a').forEach(function (el) {
+    var p = ease((t - parseFloat(el.dataset.t)) / 0.55);
+    el.style.opacity = p;
+    el.style.transform = el.dataset.k === 'pop' ? 'scale(' + (0.7 + 0.3 * p) + ')' : 'translateY(' + ((1 - p) * 60) + 'px)';
+  });
+  if (s.id === 's-loja') {
+    var idx = Math.max(0, Math.min(COLORS.length - 1, Math.floor((t - 1.6) / 0.75)));
+    var c = COLORS[idx], on = c === '#FF7A1A' ? '#221A1C' : '#FFFFFF';
+    document.getElementById('c-top').style.background = c;
+    document.getElementById('c-logo').style.color = c === '#FF7A1A' ? '#FF7A1A' : (c === '#E8213D' ? '#FF8FA0' : '#FFFFFF');
+    var plus = document.getElementById('c-plus'); plus.style.background = c; plus.style.color = on;
+    Array.prototype.forEach.call(sw.children, function (d, k) { d.style.borderColor = k === idx ? '#221A1C' : '#FFE5E9'; });
+  }
+  var w = document.getElementById('wipe'), next = scenes[i + 1];
+  if (next && t > dur - 0.45) { w.style.height = (ease((t - (dur - 0.45)) / 0.45) * 100) + '%'; w.style.background = next.dataset.bg; }
+  else { w.style.height = '0'; }
+}
+</script>
+</body>
+</html>

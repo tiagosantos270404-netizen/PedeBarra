@@ -19,3 +19,5 @@ Depois abra http://localhost:3000.
 - `src/components/` — peças reaproveitadas (logo, botões, cards)
 - `src/app/globals.css` — cores e fonte da marca
 - `ROADMAP.md`, `CHANGELOG.md`, `IDEIAS.md` — andamento do projeto
+- `materiais/` — protótipo, site para parceiros, slides, vídeo e narração (veja `materiais/README.md`)
+- `CLAUDE.md` — instruções e regras do negócio que o Claude Code lê ao abrir o projeto

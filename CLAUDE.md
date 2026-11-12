@@ -22,7 +22,25 @@ Categorias:
 
 Primeiro parceiro: **Léo Restaurante & Lancheria**.
 
-Diferencial: comissão bem menor que a do iFood, atendimento local e cada loja com a cara dela.
+Diferencial: custo bem menor que o dos grandes apps, atendimento local e cada loja com a cara dela.
+
+## Regras do negócio (já decididas — não mude sem me perguntar)
+
+- **Planos para o comerciante (ele escolhe um):**
+  - Mensalidade fixa de **R$ 89,90 por mês**, sem comissão; ou
+  - Comissão por venda, sem mensalidade: **5%** para mercados e farmácias, **6%** para restaurantes, lancherias e lojas gerais.
+- **Promoção de lançamento:** **1 mês grátis** para as **5 primeiras lojas**.
+- Sem taxa de adesão.
+- **Montagem da loja** (cadastro inicial dos produtos, feito por mim): valor **a combinar** com cada comerciante, conforme a quantidade de produtos. Restaurante e loja geral dão pouco trabalho; mercado e farmácia têm milhares de itens. O sistema não cobra isso sozinho: eu acerto por fora.
+- **Importação por planilha:** o painel do comerciante precisa aceitar uma planilha (CSV ou Excel) com código de barras, nome, preço e categoria, para cadastrar muitos produtos de uma vez. Mercados e farmácias costumam conseguir exportar isso do sistema de caixa. Mostrar uma prévia antes de salvar e avisar as linhas com erro.
+- O sistema precisa guardar o plano de cada loja e calcular sozinho quanto cada uma deve no mês.
+
+## Ainda não decidido (pergunte antes de programar essas partes; nunca invente)
+
+- Quem faz a entrega: a própria loja, entregadores do app, ou os dois.
+- Valor e regra da taxa de entrega, e até onde entrega (só a cidade ou interior também).
+- Como funciona a categoria **Flash** na prática.
+- Como o dinheiro do Pix chega na loja (direto para ela ou passando pelo Pede Barra).
 
 ## Identidade visual (seguir sempre)
 
@@ -70,11 +88,19 @@ Diferencial: comissão bem menor que a do iFood, atendimento local e cada loja c
 
 ## Ordem sugerida
 
-- **Fase 1:** estrutura do projeto, identidade visual (cores, fonte, logo, ícones), tela inicial e página da loja com dados de exemplo.
-- **Fase 2:** login, cadastro de lojas e produtos, painel do comerciante, personalização de cor.
-- **Fase 3:** carrinho, pedidos em tempo real, pagamento Pix.
-- **Fase 4:** app do entregador e acompanhamento do pedido.
-- **Fase 5:** admin, cupons, avaliações, notificações e preparação para lançar na cidade.
+A Fase 1 é pequena de propósito: quero algo funcionando rápido para mostrar nas lojas. Não comece entregador nem admin antes de eu pedir.
+
+- **Fase 1 (só isso):** app do cliente com a identidade visual pronta, tela inicial com as 5 categorias e o cardápio do Léo funcionando de verdade até o carrinho. Inclui o **modo demonstração** (ver abaixo).
+- **Fase 2:** cadastro de loja bem simples e painel do comerciante: receber pedidos com **aviso sonoro**, cadastrar produtos pelo celular, personalizar cor, logo e capa.
+- **Fase 3:** login do cliente, pedidos em tempo real, pagamento Pix e acompanhamento do pedido.
+- **Fase 4:** entregas (depois que eu decidir quem entrega).
+- **Fase 5:** admin com cobrança dos planos, cupons, avaliações, notificações e preparação para lançar na cidade.
+
+## Três coisas que não podem faltar
+
+1. **Modo demonstração:** o app abre com lojas e produtos de exemplo e funciona mesmo com internet ruim, para eu apresentar no balcão do comerciante. Os dados de exemplo ficam claramente marcados como exemplo.
+2. **Cadastro de loja fácil:** o dono de um mercado precisa conseguir montar a loja e os produtos sozinho, pelo celular, em poucos minutos. Textos simples, poucos campos, foto direto da câmera.
+3. **Aviso sonoro de pedido novo** no painel do comerciante, que continua tocando até alguém aceitar ou recusar.
 
 ## Ideias para já considerar
 
@@ -84,11 +110,11 @@ Diferencial: comissão bem menor que a do iFood, atendimento local e cada loja c
 - Programa de pontos para clientes fiéis
 - Horário de pico com aviso de tempo de entrega maior
 - Avaliação da loja e do entregador após cada pedido
-- Mensalidade fixa barata como alternativa à comissão, para o comerciante escolher
+- Tela para o comerciante comparar os dois planos com as vendas dele e ver qual sai mais barato
 
-## Primeira tarefa
+## Materiais de apresentação
 
-Leia tudo acima, me faça no máximo 3 perguntas que sejam realmente necessárias, e depois me apresente o plano da Fase 1 para eu aprovar.
+A pasta `materiais/` guarda o protótipo das telas, o site para parceiros, os slides, o vídeo e o texto da narração. Use como referência visual e de texto; os valores e regras valem os desta página. Veja `materiais/README.md`.
 
 ## Notas técnicas
 

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Pede Barra – Loja</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B3142B;text-decoration:none}a:hover{color:#8C0F22}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFFFFF; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #221A1C; display: flex; flex-direction: column; overflow: hidden">
+
+<div style="background: {{cor}}; height: 130px; position: relative; padding: 16px 20px; box-sizing: border-box">
+<a href="Main.dc.html" aria-label="Voltar" style="width: 44px; height: 44px; border-radius: 22px; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#221A1C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+</a>
+<div style="position: absolute; left: 20px; bottom: -32px; width: 72px; height: 72px; border-radius: 18px; background: #221A1C; color: {{cor}}; border: 4px solid #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px">LÉO</div>
+</div>
+
+<div style="padding: 44px 20px 12px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 22px; font-weight: 800">Léo Restaurante &amp; Lancheria</span>
+<span style="font-size: 13px; color: #5B6663">Lanches e refeições · Aberto até 23h</span>
+<div style="display: flex; gap: 8px; margin-top: 6px">
+<span style="font-size: 12px; font-weight: 600; background: {{clara}}; color: {{escura}}; padding: 6px 10px; border-radius: 99px">30–40 min</span>
+<span style="font-size: 12px; font-weight: 600; background: {{clara}}; color: {{escura}}; padding: 6px 10px; border-radius: 99px">Entrega R$ 5,00</span>
+<span style="font-size: 12px; font-weight: 600; background: {{clara}}; color: {{escura}}; padding: 6px 10px; border-radius: 99px">Pix na entrega</span>
+</div>
+</div>
+
+<div style="display: flex; gap: 18px; padding: 0 20px; border-bottom: 1px solid #E3E8E6">
+<span style="font-size: 14px; font-weight: 700; color: {{escura}}; border-bottom: 3px solid {{escura}}; padding: 10px 0">Xis</span>
+<span style="font-size: 14px; color: #5B6663; padding: 10px 0">Porções</span>
+<span style="font-size: 14px; color: #5B6663; padding: 10px 0">Pratos</span>
+<span style="font-size: 14px; color: #5B6663; padding: 10px 0">Bebidas</span>
+</div>
+
+<div style="flex: 1; overflow: hidden; padding: 8px 20px; display: flex; flex-direction: column">
+<div style="display: flex; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid #EEF1F0">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; font-weight: 700">Xis Salada</span>
+<span style="font-size: 13px; color: #5B6663">Hambúrguer, ovo, queijo, alface, tomate e milho</span>
+<span style="font-size: 15px; font-weight: 700">R$ 22,00</span>
+</div>
+<button type="button" aria-label="Adicionar Xis Salada" style="width: 44px; height: 44px; border-radius: 12px; border: 0; background: {{cor}}; color: {{sobre}}; font-size: 22px; font-weight: 700">+</button>
+</div>
+<div style="display: flex; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid #EEF1F0">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; font-weight: 700">Xis Coração</span>
+<span style="font-size: 13px; color: #5B6663">Coração de frango, queijo, presunto e salada</span>
+<span style="font-size: 15px; font-weight: 700">R$ 28,00</span>
+</div>
+<button type="button" aria-label="Adicionar Xis Coração" style="width: 44px; height: 44px; border-radius: 12px; border: 0; background: {{cor}}; color: {{sobre}}; font-size: 22px; font-weight: 700">+</button>
+</div>
+<div style="display: flex; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid #EEF1F0">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; font-weight: 700">Xis Bacon</span>
+<span style="font-size: 13px; color: #5B6663">Hambúrguer, bacon, queijo, ovo e salada</span>
+<span style="font-size: 15px; font-weight: 700">R$ 26,00</span>
+</div>
+<button type="button" aria-label="Adicionar Xis Bacon" style="width: 44px; height: 44px; border-radius: 12px; border: 0; background: {{cor}}; color: {{sobre}}; font-size: 22px; font-weight: 700">+</button>
+</div>
+<div style="display: flex; gap: 12px; align-items: center; padding: 14px 0">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; font-weight: 700">Batata frita (porção)</span>
+<span style="font-size: 13px; color: #5B6663">Serve 2 pessoas</span>
+<span style="font-size: 15px; font-weight: 700">R$ 18,00</span>
+</div>
+<button type="button" aria-label="Adicionar Batata frita" style="width: 44px; height: 44px; border-radius: 12px; border: 0; background: {{cor}}; color: {{sobre}}; font-size: 22px; font-weight: 700">+</button>
+</div>
+</div>
+
+<div style="padding: 12px 20px 20px">
+<a href="Carrinho.dc.html" style="display: flex; justify-content: space-between; align-items: center; height: 56px; padding: 0 18px; border-radius: 14px; background: {{cor}}; color: {{sobre}}; font-weight: 800; font-size: 15px">
+<span>Ver carrinho · 2 itens</span><span>R$ 50,00</span>
+</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"corDaLoja":{"editor":"color","default":"#E8213D","options":["#E8213D","#E8213D","#1E8A4C","#1F6FD1","#7A3FC2"],"section":"Loja"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const hex = (this.props.corDaLoja ?? '#E8213D').replace('#', '');
+const rgb = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16) || 0);
+const lin = (c) => { c = c / 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+const lum = (a) => 0.2126 * lin(a[0]) + 0.7152 * lin(a[1]) + 0.0722 * lin(a[2]);
+const L = lum(rgb);
+const sobre = (1.05 / (L + 0.05)) >= ((L + 0.05) / (lum([43, 22, 8]) + 0.05)) ? '#FFFFFF' : '#221A1C';
+const toHex = (a) => '#' + a.map((v) => Math.round(Math.max(0, Math.min(255, v))).toString(16).padStart(2, '0')).join('');
+let k = 1, esc = rgb;
+while (k > 0.2 && (1.05 / (lum(esc) + 0.05)) < 5) { k -= 0.05; esc = rgb.map((v) => v * k); }
+const clara = rgb.map((v) => v + (255 - v) * 0.86);
+return { cor: '#' + hex, sobre: sobre, escura: toHex(esc), clara: toHex(clara) };
+}
+}
+</script>
+</body>
+</html>

@@ -12,7 +12,11 @@
 - **1.5 Instalar no celular (PWA):** ícone na tela inicial e tela de abertura.
 
 ## Fases seguintes
-- **Fase 2:** login, cadastro de lojas e produtos, painel do comerciante, personalização de cor.
-- **Fase 3:** carrinho, pedidos em tempo real, pagamento Pix.
-- **Fase 4:** app do entregador e acompanhamento do pedido.
-- **Fase 5:** admin, cupons, avaliações, notificações e lançamento na cidade.
+- **Fase 2:** cadastro de loja bem simples e painel do comerciante: pedidos com aviso sonoro, produtos pelo celular, importação por planilha, cor, logo e capa.
+- **Fase 3:** login do cliente, pedidos em tempo real, pagamento Pix e acompanhamento do pedido.
+- **Fase 4:** entregas (depois de decidir quem entrega).
+- **Fase 5:** admin com cobrança dos planos, cupons, avaliações, notificações e lançamento na cidade.
+
+## Fora do app (materiais para visitar as lojas)
+- **Feito:** protótipo das telas, logo e ícones das categorias, site para parceiros, slides e vídeo de apresentação. Tudo em `materiais/`.
+- **Falta:** gravar a narração do vídeo (texto em `materiais/video/narracao.md`).

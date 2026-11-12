@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Pede Barra – Carrinho</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#B3142B;text-decoration:none}a:hover{color:#8C0F22}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF5F6; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #221A1C; display: flex; flex-direction: column; overflow: hidden">
+
+<div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #FFFFFF">
+<a href="Loja.dc.html" aria-label="Voltar" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#221A1C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+</a>
+<span style="font-size: 18px; font-weight: 800">Seu carrinho</span>
+</div>
+
+<div style="flex: 1; overflow: hidden; padding: 16px 20px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="background: #FFFFFF; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 13px; font-weight: 700; color: #5B6663">Léo Restaurante &amp; Lancheria</span>
+<div style="display: flex; justify-content: space-between"><span style="font-size: 15px">1× Xis Salada</span><span style="font-size: 15px; font-weight: 600">R$ 22,00</span></div>
+<div style="display: flex; justify-content: space-between"><span style="font-size: 15px">1× Xis Coração</span><span style="font-size: 15px; font-weight: 600">R$ 28,00</span></div>
+</div>
+
+<div style="background: #FFFFFF; border-radius: 16px; padding: 16px; display: flex; gap: 12px; align-items: center">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B3142B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 15px; font-weight: 700">[Rua e número]</span>
+<span style="font-size: 13px; color: #5B6663">Centro, Barra do Ribeiro</span>
+</div>
+<span style="font-size: 13px; font-weight: 700; color: #B3142B">Trocar</span>
+</div>
+
+<div style="background: #FFFFFF; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 15px; font-weight: 800">Pagamento</span>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 12px; border: 2px solid #B3142B; font-size: 15px; font-weight: 600">
+<input type="radio" name="pag" checked style="accent-color: #B3142B; width: 18px; height: 18px">Pix pelo app
+</label>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 12px; border: 1px solid #D5DCDA; font-size: 15px">
+<input type="radio" name="pag" style="accent-color: #B3142B; width: 18px; height: 18px">Cartão na entrega
+</label>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 12px; border: 1px solid #D5DCDA; font-size: 15px">
+<input type="radio" name="pag" style="accent-color: #B3142B; width: 18px; height: 18px">Dinheiro (troco para…)
+</label>
+</div>
+
+<div style="background: #FFFFFF; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; font-size: 14px; color: #5B6663"><span>Subtotal</span><span>R$ 50,00</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 14px; color: #5B6663"><span>Entrega</span><span>R$ 5,00</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 14px; color: #B3142B; font-weight: 600"><span>Cupom BEMVINDO</span><span>− R$ 5,00</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 17px; font-weight: 800; padding-top: 6px; border-top: 1px solid #E3E8E6"><span>Total</span><span>R$ 50,00</span></div>
+</div>
+</div>
+
+<div style="padding: 12px 20px 20px; background: #FFFFFF">
+<a href="Pedido.dc.html" style="display: flex; justify-content: center; align-items: center; height: 56px; border-radius: 14px; background: #E8213D; color: #FFFFFF; font-weight: 800; font-size: 16px">Fazer pedido</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
