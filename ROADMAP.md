@@ -4,7 +4,7 @@
 - **1.1 Estrutura:** projeto criado, cores e fonte da marca, logo, página "em breve".
 
 ## Em andamento
-- **Página da loja e compra até o carrinho:** planejamento fechado em `PROMPT-LOJA.md`. Ainda não programada.
+- **Página da loja e compra até o carrinho:** em construção no ramo `etapa-loja-carrinho`. Prontos e testados: dados de exemplo, contas do carrinho, horários, busca e cores. Escritos mas ainda não testados no navegador: peças visuais e tela do produto. Faltam: página da loja, tela do carrinho, lista das lojas e validação. Detalhes em `CONTINUAR.md`.
 
 ## Próximas etapas da Fase 1
 - **Tela inicial:** endereço, busca, categorias, banner do cupom BEMVINDO, Loja do mês, lojas próximas.

@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "tipos": "next typegen && tsc --noEmit",
+    "test": "node --test \"testes/*.test.ts\"",
+    "conferir": "npm run lint && npm run tipos && npm test && npm run build"
   },
   "dependencies": {
     "next": "16.4.3",
@@ -22,5 +25,6 @@
     "eslint-config-next": "16.4.3",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "type": "module"
 }

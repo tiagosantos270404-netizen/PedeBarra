@@ -1,5 +1,12 @@
 # Atualizações
 
+## 12/11/2026 — Página da loja e carrinho: primeira parte (ainda sem telas)
+- Criadas as três lojas de exemplo: Léo, um mercado e uma farmácia só com higiene e beleza. Produtos, preços e horários são demonstrativos.
+- Prontas e testadas as regras: contas do carrinho, complementos obrigatórios e limites, entrega a R$ 7,00 e retirada grátis, uma loja por pedido, recuperação do carrinho salvo, loja aberta ou fechada e busca.
+- Escritas, mas ainda não testadas no navegador: ícones, ilustrações no lugar das fotos, tela do produto, barra do carrinho e favoritar.
+- Ainda não dá para usar pelo app: faltam a página da loja, a tela do carrinho e a lista das lojas. O passo a passo para continuar está em `CONTINUAR.md`.
+- Nada foi publicado.
+
 ## 12/11/2026 — Planejamento da página da loja e do carrinho
 - Especificação da etapa consolidada em `PROMPT-LOJA.md`: página da loja, produtos com complementos, carrinho e demonstração.
 - Decisões novas: retirada grátis, sem pedido mínimo, sem avaliações por enquanto, destaques escolhidos pela loja, farmácia de exemplo sem medicamentos.

@@ -21,6 +21,12 @@
   --color-cinza: #f4f2f2;
   --color-borda: #ebe6e7;
 
+  /* Avisos e situação */
+  --color-sucesso: #17703d;
+  --color-sucesso-claro: #e3f4ea;
+  --color-aviso: #6b4e00;
+  --color-aviso-claro: #fff4d6;
+
   /* Categorias */
   --color-restaurantes: #e8213d;
   --color-farmacias: #1e8a4c;
@@ -46,4 +52,28 @@ h2,
 h3 {
   font-weight: 800;
   letter-spacing: -0.02em;
+}
+
+/* Barras de rolagem horizontal (categorias e destaques) sem a barrinha visível. */
+.sem-barra {
+  scrollbar-width: none;
+}
+.sem-barra::-webkit-scrollbar {
+  display: none;
+}
+
+/* Contorno bem visível para quem navega pelo teclado. */
+:focus-visible {
+  outline: 3px solid var(--color-texto);
+  outline-offset: 2px;
+}
+
+dialog::backdrop {
+  background: rgb(34 26 28 / 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
 }

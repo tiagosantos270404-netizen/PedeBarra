@@ -90,4 +90,4 @@ Ainda não existe: dados das lojas e produtos, página da loja, tela do produto,
 
 ## Situação
 
-Planejamento fechado. Nenhuma parte desta etapa foi programada ainda.
+Em construção no ramo `etapa-loja-carrinho`. Veja `CONTINUAR.md` para o que já está pronto e o que falta.
