@@ -1,79 +1,93 @@
-# Prompt: página da loja
+# Etapa: página da loja e compra até o carrinho
 
-> Rascunho em construção. O Tiago vai acrescentando ideias na seção "Ideias novas" e respondendo "Falta decidir". Só começar a programar quando ele disser que o prompt está fechado.
+> Especificação consolidada pelo Tiago em 12/11/2026. Substitui as propostas anteriores deste arquivo quando houver conflito. Antes de alterar o código, confira o que já existe e aproveite as partes prontas.
 
-## O pedido
+## Objetivo
 
-Construa a **página da loja** do app do cliente do Pede Barra: a tela que abre quando o cliente toca numa loja. Ela precisa funcionar de verdade até o carrinho, com o Léo Restaurante & Lancheria como primeira loja. Siga o `CLAUDE.md` (identidade visual, regras do negócio e jeito de trabalhar) e use `materiais/prototipo/Loja.dc.html` como referência do visual.
+Construir a experiência de página da loja e compra até o carrinho, com navegação familiar a quem usa aplicativos como o iFood, mantendo a identidade própria do Pede Barra. Priorize o celular.
 
-## Referência: iFood
+## 1. Página da loja
 
-O Tiago quer a loja e o app funcionando no estilo do iFood (https://www.ifood.com.br/). Use o iFood como referência de **como funciona**: a ordem das informações, o jeito de escolher adicionais, a sacola. **Não copie** o visual dele: cores, logo, ícones, ilustrações e textos são do Pede Barra, conforme o `CLAUDE.md`.
+- Capa ou cor personalizada, logo, nome, tipo de comércio e horários.
+- Situação aberta ou fechada. Quando fechada, permita consultar o catálogo, mostre o próximo horário de abertura e bloqueie pedidos. Sem agendamento.
+- Tempo estimado, entrega por R$ 7,00 e opção de retirada grátis.
+- Formas de pagamento apenas informativas e identificadas como demonstrativas, sem cobrança real.
+- Sem pedido mínimo e sem avaliações nesta etapa.
+- Busca por nome e descrição dentro da loja.
+- Destaques escolhidos pela loja. Na demonstração, use uma seleção definida nos dados de exemplo, sem chamar de "mais vendidos".
+- Categorias em uma barra horizontal que permanece acessível durante a rolagem, sem sobrepor o conteúdo.
+- Adapte categorias ao comércio: não use seções de restaurante no mercado ou na farmácia.
 
-O que trazer do jeito iFood de funcionar:
+## 2. Produtos e complementos
 
-- **Cabeçalho da loja** com nota, pedido mínimo, tempo e taxa de entrega, e um "ver mais" com horário, endereço e formas de pagamento.
-- **Entrega ou retirada:** o cliente escolhe no topo da loja.
-- **Busca dentro da loja**, para achar um produto pelo nome.
-- **Destaques:** uma fileira de produtos em evidência, que rola de lado, antes do cardápio.
-- **Seções do cardápio** numa barra que fica presa no topo enquanto o cliente rola.
-- **Produto com foto à direita**, nome, descrição e preço. Preço promocional mostra o valor antigo riscado.
-- **Tela do produto com complementos em grupos:** cada grupo diz se é obrigatório ou opcional e quantos itens dá para escolher (ex.: "Escolha 1 molho", "Adicionais, até 5"). O total atualiza na hora.
-- **Sacola de uma loja só:** se o cliente tentar adicionar item de outra loja, o app pergunta se quer esvaziar a sacola.
-- **Loja fechada** aparece com aviso e horário em que abre.
-- **Favoritar a loja** com um toque.
+- Nome, descrição, preço e foto.
+- Produto esgotado permanece visível, claramente identificado e sem permitir inclusão.
+- Preço anterior riscado somente quando existir uma promoção definida nos dados; não invente descontos.
+- Ao abrir um produto, mostre imagem maior, quantidade, observações e grupos de opções ou adicionais.
+- Cada grupo deve informar se é obrigatório, quantas opções permite e os custos adicionais.
+- Valide seleções obrigatórias e limites antes de adicionar.
+- Atualize o valor conforme opções, adicionais e quantidade.
+- Para itens com escolhas obrigatórias, o botão "+" deve abrir a seleção.
+- No celular, mantenha o botão de adicionar acessível sem cobrir campos ou conteúdo.
 
-Tudo isso está marcado como proposta em "Falta decidir" quando depende de uma decisão do Tiago.
+## 3. Carrinho
 
-## O que o cliente vê
+- Uma loja por pedido.
+- Ao tentar adicionar de outra loja, peça confirmação para substituir o carrinho. Cancelar preserva os itens anteriores.
+- Separe itens com opções ou observações diferentes.
+- Permita alterar quantidades, remover produtos e revisar complementos.
+- Barra fixa inferior com quantidade e subtotal dos produtos.
+- Dentro do carrinho, mostre subtotal, frete e total separadamente.
+- Entrega: R$ 7,00 por pedido, somente na área urbana de Barra do Ribeiro.
+- Retirada: R$ 0,00 de frete, sem exigir endereço de entrega.
+- Não invente bairros, limites geográficos ou validação de cobertura ainda não definida.
+- Preserve o carrinho ao recarregar e trate dados salvos inválidos ou desatualizados.
+- Confira disponibilidade, preços e situação da loja antes de concluir a simulação.
 
-1. **Topo da loja:** foto de capa (ou a cor da loja, se não tiver foto), logo, nome e tipo de comércio.
-2. **Situação:** aberta ou fechada agora, com o horário. Loja fechada aparece, mas não deixa pedir.
-3. **Informações rápidas:** tempo estimado, taxa de entrega de R$ 7,00 e formas de pagamento aceitas.
-4. **Seções do cardápio:** abas que rolam de lado (ex.: Xis, Porções, Pratos, Bebidas). Tocar numa aba leva até a seção.
-5. **Produtos:** nome, descrição curta, preço e foto quando tiver. Botão "+" grande para adicionar.
-6. **Detalhe do produto:** abre ao tocar no produto, com foto maior, descrição completa, quantidade e campo de observação (ex.: "sem cebola").
-7. **Barra do carrinho:** fixa embaixo, com quantidade de itens e total. Só aparece quando tem algo no carrinho.
+## 4. Demonstração
 
-## Cor da loja
+- Léo Restaurante & Lancheria como primeira loja, mais um mercado e uma farmácia de exemplo.
+- Use produtos e preços claramente demonstrativos enquanto não houver cardápio real do Léo.
+- Farmácia com higiene e beleza apenas, sem medicamentos nesta etapa.
+- Não invente notas, avaliações, depoimentos ou números de vendas.
+- A conclusão deve dizer: "Pedido de demonstração. Nada foi enviado ou cobrado."
+- Dados de exemplo disponíveis localmente. Não prometa funcionamento offline completo sem implementá-lo e verificá-lo.
+- Favoritar a loja pode entrar como recurso local, sem login, deixando claro que fica salvo apenas naquele navegador.
 
-- Cada loja tem a própria cor. Ela pinta o topo, os botões "+", as etiquetas e a barra do carrinho.
-- O app calcula sozinho se o texto por cima fica branco ou escuro.
-- As partes do Pede Barra (menu de baixo, carrinho, pedido) continuam no vermelho da marca.
+## 5. Identidade e usabilidade
 
-## Dados
+- Siga cores, fonte, logo e regras visuais do projeto.
+- Cor personalizada da loja em sua página; ações gerais e carrinho mantêm a identidade do Pede Barra.
+- Boa leitura, contraste adequado e botões com pelo menos 44 px.
+- Sem emojis na interface.
+- Use textos próprios e imagens autorizadas ou demonstrativas.
+- Evite elementos que distraiam da busca e da escolha dos produtos.
 
-- Léo Restaurante & Lancheria com o cardápio real, quando o Tiago enviar. Até lá, itens de exemplo marcados como exemplo.
-- Mais duas lojas de exemplo (uma farmácia e um mercado) para testar a página com outro tipo de produto e outra cor.
-- Tudo funciona no **modo demonstração**: abre sem login e com internet ruim.
+## 6. Limites desta etapa
 
-## Fora desta etapa
+Não implementar login, pagamento real, envio de pedidos, painel do comerciante, entregadores, repasses, agendamento ou avaliações.
 
-- Login, pagamento de verdade e acompanhamento do pedido.
-- Painel do comerciante e cadastro de produtos.
-- Entregadores (Fase 4).
+Regras futuras já registradas no `CLAUDE.md`: entregadores cadastrados no Pede Barra, taxa fixa de R$ 7,00 integralmente destinada ao entregador e atendimento somente na área urbana. Forma de repasse, delimitação da cobertura e procedimento quando ninguém aceitar continuam pendentes.
 
-## Como entregar
+## 7. Validação e entrega
 
-- Em etapas pequenas, me mostrando cada uma e dizendo como testar no celular.
-- Atualizar `ROADMAP.md` e `CHANGELOG.md` e fazer um commit por etapa.
-- No fim de cada etapa, de 1 a 3 sugestões de melhoria.
+Verifique busca, navegação por categorias, complementos obrigatórios, limites de seleção, cálculos, esgotados, loja fechada, troca de loja, recuperação do carrinho e alternância entre entrega e retirada.
 
-## Falta decidir
+Execute as verificações pertinentes do projeto. Atualize `CLAUDE.md`, `ROADMAP.md` e `CHANGELOG.md` para refletir as decisões e o que realmente foi implementado.
 
-Onde diz "proposta", é o jeito que o iFood faz. Vale se o Tiago confirmar.
+Ao terminar, explique o que mudou, como testar e o que ainda falta. Não publique nesta etapa.
 
-1. **Cardápio do Léo:** quais são os itens, as seções e os preços reais?
-2. **Adicionais e opções:** proposta: grupos de complementos, obrigatórios ou opcionais, com extras pagos.
-3. **Produto em falta:** proposta: continua aparecendo, apagado e marcado como "esgotado".
-4. **Pedido mínimo:** proposta: cada loja define o seu, e a sacola avisa quanto falta.
-5. **Retirar na loja:** proposta: o cliente pode retirar e não paga a taxa de entrega.
-6. **Loja fechada:** proposta: mostra o cardápio, mas não deixa pedir. Sem agendamento por enquanto.
-7. **Busca dentro da loja:** proposta: entra já nesta etapa.
-8. **Farmácia:** remédio que exige receita fica fora do app?
-9. **Avaliações:** proposta: a nota aparece no cabeçalho. Loja nova mostra "Novo" até ter avaliações.
-10. **Destaques:** quem escolhe os produtos em destaque: a loja, ou o app pelos mais vendidos?
+## O que já existe no código (conferido em 12/11/2026)
 
-## Ideias novas
+Pronto e para reaproveitar:
 
-(vazio por enquanto)
+- `src/app/globals.css`: cores da marca e das categorias e a fonte, no bloco `@theme`.
+- `src/app/layout.tsx`: fonte Plus Jakarta Sans, título e cor do tema.
+- `src/components/Logo.tsx`: ícone e logo completo, em tom claro ou escuro.
+- `src/app/page.tsx`: página provisória "em breve".
+
+Ainda não existe: dados das lojas e produtos, página da loja, tela do produto, carrinho, ícones das categorias, botões e cards reutilizáveis.
+
+## Situação
+
+Planejamento fechado. Nenhuma parte desta etapa foi programada ainda.

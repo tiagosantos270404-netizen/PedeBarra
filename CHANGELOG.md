@@ -1,5 +1,10 @@
 # Atualizações
 
+## 12/11/2026 — Planejamento da página da loja e do carrinho
+- Especificação da etapa consolidada em `PROMPT-LOJA.md`: página da loja, produtos com complementos, carrinho e demonstração.
+- Decisões novas: retirada grátis, sem pedido mínimo, sem avaliações por enquanto, destaques escolhidos pela loja, farmácia de exemplo sem medicamentos.
+- Nada foi programado ainda.
+
 ## 12/11/2026 — Decisões sobre as entregas
 - Entregas feitas por entregadores cadastrados no Pede Barra, com taxa fixa de R$ 7,00 por pedido, inteira para o entregador.
 - Atendimento só na área urbana de Barra do Ribeiro.

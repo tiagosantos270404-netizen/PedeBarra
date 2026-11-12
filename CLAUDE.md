@@ -112,6 +112,23 @@ A Fase 1 é pequena de propósito: quero algo funcionando rápido para mostrar n
 - **Fase 4:** entregas com entregadores cadastrados, seguindo a seção "Entregas". Antes de começar, me pergunte os três pontos de entrega que ainda estão pendentes.
 - **Fase 5:** admin com cobrança dos planos, cupons, avaliações, notificações e preparação para lançar na cidade.
 
+## Etapa atual: página da loja e compra até o carrinho
+
+A especificação completa e aprovada está em `PROMPT-LOJA.md`. Siga ela à risca; em caso de conflito com textos mais antigos, vale ela. Decisões desta etapa:
+
+- **Retirada na loja** é grátis e não pede endereço. **Entrega** custa R$ 7,00 por pedido.
+- **Sem pedido mínimo** e **sem avaliações** nesta etapa. Não invente notas, depoimentos nem números de vendas.
+- **Loja fechada** mostra o catálogo e o próximo horário de abertura, mas bloqueia pedidos. Sem agendamento.
+- **Destaques** são escolhidos pela loja. Não chame de "mais vendidos".
+- **Produto esgotado** continua visível, identificado, e não pode ser adicionado.
+- **Promoção** só aparece com preço anterior riscado quando estiver definida nos dados.
+- **Carrinho de uma loja só.** Trocar de loja pede confirmação.
+- **Pagamento é só informativo** e marcado como demonstração. Nada é cobrado nem enviado.
+- **Farmácia de exemplo** só com higiene e beleza, sem medicamentos.
+- A conclusão do pedido de exemplo diz: "Pedido de demonstração. Nada foi enviado ou cobrado."
+- **Fora desta etapa:** login, pagamento real, envio de pedidos, painel do comerciante, entregadores, repasses, agendamento e avaliações.
+- **Não publique** o app nesta etapa.
+
 ## Três coisas que não podem faltar
 
 1. **Modo demonstração:** o app abre com lojas e produtos de exemplo e funciona mesmo com internet ruim, para eu apresentar no balcão do comerciante. Os dados de exemplo ficam claramente marcados como exemplo.
